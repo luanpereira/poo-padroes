@@ -1,7 +1,24 @@
 package br.poo.padroes.factory.method;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class Soma implements IOperacao {
-	private BigDecimal mumero;
+	private List<BigDecimal> parcelas;
+
+	@Override
+	public List<BigDecimal> getParcelas() {
+		return parcelas;
+	}
+
+	@Override
+	public void setParcelas(List<BigDecimal> parcelas) {
+		this.parcelas = parcelas;
+	}
+	
+	@Override
+	public BigDecimal resultado(){
+		return BigDecimal.ZERO;
+	}
+	
 }
